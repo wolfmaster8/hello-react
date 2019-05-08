@@ -1,8 +1,7 @@
 import React from 'react';
-
 import { spotifyConsume } from '../services/spotify-api';
 import { PlaylistCard } from './PlaylistCard';
-import Skeleton from 'react-loading-skeleton';
+import { PlaylistCardSkeleton } from './PlaylistCardSkeleton';
 
 export class Playlists extends React.Component {
 
@@ -28,7 +27,7 @@ export class Playlists extends React.Component {
 
     render() {
         const {playlists, loading} = this.state;
-        if(loading) return <Skeleton width={200} height={300}/>;
+        if(loading) return <PlaylistCardSkeleton />;
         return (
             <div>
                 <ul>
