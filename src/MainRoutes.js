@@ -34,10 +34,11 @@ class MainRoutes extends React.Component {
 
     get contextProps() {
         const {
-            userInfo
+            userInfo,
+
         } = this.state;
 
-        return { userInfo };
+        return { userInfo, logout: this.logout };
     }
 
     fetchUserInfo = () => {
@@ -50,6 +51,11 @@ class MainRoutes extends React.Component {
                 console.log( error )
             } )
     };
+
+    logout = () => {
+        localStorage.clear();
+        this.props.history.push('/')
+    }
 
     render() {
         return (

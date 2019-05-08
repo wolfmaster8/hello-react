@@ -15,7 +15,7 @@ export const Header = () => {
                     <div className="d-flex align-items-center">
                         <img alt={context.userInfo.display_name} height={40} width={40} className="rounded-circle" src={get(context, 'userInfo.images[0].url')} />
                         <p className="black-color m-0 ml-2">{context.userInfo.display_name}</p>
-                        <button className="ml-3 btn btn-default spotify-button">Logout</button>
+                        <button onClick={() => context.logout()} className="ml-3 btn btn-default spotify-button">Logout</button>
                     </div>
                 )}
             </UserContext.Consumer>

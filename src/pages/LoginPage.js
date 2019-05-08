@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom';
 import Login from '../components/Login'
 import Logo from '../assets/images/logo.png';
 
@@ -10,7 +11,7 @@ class LoginPage  extends Component{
                 <section>
                     <div className="d-flex align-items-center justify-content-center">
                         <img alt="logo" src={Logo} width={40} />
-                        <h2 className="ml-1 green-color">SpotifyPlay </h2>
+                        <h2 className="ml-1 green-color">SpotifyPlay</h2>
                     </div>
                     <p className="text-muted mb-4">Let's play with Spotify</p>
                     <Login/>
@@ -20,4 +21,4 @@ class LoginPage  extends Component{
     }
 }
 
-export default LoginPage ;
+export default withRouter(LoginPage) ;
