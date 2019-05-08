@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
+import { Playlists } from '../components/Playlists';
 
 class DashboardPage extends Component{
     constructor(props) {
@@ -16,8 +17,8 @@ class DashboardPage extends Component{
     render() {
         // if(loading) return <p>Loading info...</p>;
         return (
-            <div className="container m-3">
-
+            <div className="container-fluid">
+                <Playlists />
             </div>
         );
     }
