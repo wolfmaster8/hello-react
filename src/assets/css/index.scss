@@ -1,0 +1,35 @@
+$green: #1DB954;
+$black: #191414;
+
+.green-color{
+  color: $green;
+}
+
+.white-color{
+  color: white;
+}
+
+.black-color{
+  color: $black;
+}
+
+.green-background{
+  background: $green;
+}
+
+.black-background{
+  background: $black;
+}
+
+.menu-header {
+  box-shadow: 2px 2px 18px rgba(0,0,0,0.2);
+}
+
+.spotify-button{
+  background: $green;
+  color: white;
+  border-radius: 50px;
+  &:hover{
+    color: white;
+  }
+}
