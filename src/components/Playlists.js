@@ -20,7 +20,6 @@ export class Playlists extends React.Component{
                 this.setState({
                     playlists: response.data.items,
                     loading: false
-
                 })
             })
     }
@@ -28,11 +27,11 @@ export class Playlists extends React.Component{
 
     render(){
         const {playlists, loading} = this.state;
-        if(loading) return <PlaylistCardSkeleton/>
+        if(loading) return <PlaylistCardSkeleton/>;
         return(
             <div>
                 {playlists.map(playlist => (
-                    <PlaylistCard playlist={playlist} />
+                    <PlaylistCard key={playlist.id} playlist={playlist} />
                 ))
 
                 }
