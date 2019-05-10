@@ -6,7 +6,7 @@ class Login extends Component{
         const baseURL = 'https://accounts.spotify.com/authorize';
         const clientId = process.env.REACT_APP_SPOTIFY_CLIENT;
         const redirectUri = encodeURI('http://localhost:3000/me');
-        window.open(`${baseURL}?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token`)
+        window.open(`${baseURL}?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token`, '_self')
     };
 
     render() {
