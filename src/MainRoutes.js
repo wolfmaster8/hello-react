@@ -9,9 +9,12 @@ import { Header } from './components/Header';
 class MainRoutes extends React.Component {
     constructor(props) {
         super( props );
-        const token = localStorage.getItem( 'token' );
-        if ( token ) {
-            spotifyConsume.defaults.headers.Authorization = token;
+        const hashToken = this.props.location.hash;
+        const token = hashToken.split(/(?<==)(.*?)(?=\(?&token)/)[1];
+        localStorage.setItem('token', `Bearer ${token}`);
+        const tokenLocal = localStorage.getItem( 'token' );
+        if ( tokenLocal && token ) {
+            spotifyConsume.defaults.headers.Authorization = tokenLocal;
         } else {
             delete spotifyConsume.defaults.headers.Authorization;
         }
