@@ -47,7 +47,6 @@ class MainRoutes extends React.Component {
     fetchUserInfo = () => {
         spotifyConsume.get( '/me' )
             .then( (response) => {
-                console.log(response.data)
                 this.setState( { userInfo: response.data, loading: false } );
             } )
             .catch( (error) => {
